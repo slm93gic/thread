@@ -1,10 +1,5 @@
 package thread.download;
 
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
-import java.net.URL;
-
 /**
  * 多线程1下载图片
  * p2
@@ -13,8 +8,8 @@ public class P04ThreadDownload extends Thread {
 
     WebDownloader downloader = new WebDownloader();
 
-    private String url;
-    private String fileName;
+    private final String url;
+    private final String fileName;
 
     P04ThreadDownload(String url, String fileName) {
         this.fileName = fileName;
